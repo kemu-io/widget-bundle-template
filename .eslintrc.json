@@ -1,0 +1,116 @@
+{
+  "parserOptions": {
+    "ecmaVersion": 2021,
+    "sourceType": "module",
+    "project": "./tsconfig.json"
+  },
+  "overrides": [
+    {
+      "extends": [
+        "plugin:@typescript-eslint/recommended-requiring-type-checking"
+      ],
+      "files": [
+        "./**/*.{ts}"
+      ]
+    },
+    {
+      "extends": [
+        "plugin:@typescript-eslint/disable-type-checked"
+      ],
+      "files": [
+        "rollup.config.mjs"
+      ]
+    }
+  ],
+  "env": {
+    "browser": true,
+    "node": true,
+    "jest": true
+  },
+  "extends": [
+    "eslint:recommended",
+    "plugin:@typescript-eslint/recommended",
+    "plugin:react/recommended",
+    "plugin:import/errors",
+    "plugin:import/warnings"
+  ],
+  "plugins": [
+    "@typescript-eslint",
+    "deprecation",
+    "import",
+    "jest",
+    "react",
+    "react-hooks"
+  ],
+  "rules": {
+    "max-len": ["warn", { "code": 200 }],
+    "quotes": [
+      "warn",
+      "single",
+      {
+        "allowTemplateLiterals": true
+      }
+    ],
+    "object-curly-spacing": [
+      "warn",
+      "always"
+    ],
+    "array-bracket-spacing": [
+      "warn",
+      "never"
+    ],
+    "block-spacing": [
+      "warn",
+      "always"
+    ],
+    "space-before-blocks": "warn",
+    "keyword-spacing": "warn",
+    "no-undef": "error",
+    "space-before-function-paren": "warn",
+    "react/jsx-uses-react": "warn",
+    "react/jsx-uses-vars": "warn",
+    "no-duplicate-case": "warn",
+    "no-duplicate-imports": "warn",
+    "arrow-spacing": [
+      "warn",
+      {
+        "before": true,
+        "after": true
+      }
+    ],
+    "no-trailing-spaces": [
+      "warn",
+      {
+        "ignoreComments": true
+      }
+    ],
+    "no-redeclare": "warn",
+    "no-var": "warn",
+    "react/display-name": "off",
+    "react/prop-types": "off",
+    "@typescript-eslint/no-non-null-assertion": "off",
+    "@typescript-eslint/no-unused-vars": [
+      "warn",
+      {
+        "varsIgnorePattern": "_*"
+      }
+    ],
+    "react-hooks/rules-of-hooks": "error",
+    "react-hooks/exhaustive-deps": "warn",
+    "deprecation/deprecation": "warn",
+    "import/no-unresolved": "error",
+    "import/order": "warn",
+    "import/named": "off",
+    "linebreak-style": [
+      "warn",
+      "unix"
+    ]
+  },
+  "settings": {
+    "import/resolver": {
+      "node": {
+        "extensions": [".js", ".jsx", ".ts"]
+      }
+    }
+  }
+}
